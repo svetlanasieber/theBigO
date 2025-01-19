@@ -1,5 +1,5 @@
 # Baum–Welch algorithm (EM algorithm)
 
 ------------------------------------------------------
-Viterbi algorithm
+# Viterbi algorithm
 -------------------------------------------------------
