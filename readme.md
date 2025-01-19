@@ -1,7 +1,7 @@
-Baum–Welch algorithm (EM algorithm)
+Baum–Welch algorithm (EM Algorithm)
 
 ------------------------------------------------------
-Viterbi algorithm
+Viterbi Algorithm
 -------------------------------------------------------
 Forward Algorithm
 ------------------------------------------------------------------
