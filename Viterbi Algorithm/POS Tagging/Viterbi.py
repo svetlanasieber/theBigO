@@ -1,19 +1,24 @@
 import numpy as np
 
+# Define states and observations
+states = ["Noun", "Verb", "Adjective"]
+observations = ["The cat", "jumps", "high"]
 
-states = ["N", "V", "Adj"]
-observations = ["Котката", "скача", "високо"]
 
-start_prob = {"N": 0.6, "V": 0.3, "Adj": 0.1}
+start_prob = {"Noun": 0.6, "Verb": 0.3, "Adjective": 0.1}
+
+
 trans_prob = {
-    "N": {"N": 0.4, "V": 0.4, "Adj": 0.2},
-    "V": {"N": 0.5, "V": 0.3, "Adj": 0.2},
-    "Adj": {"N": 0.3, "V": 0.3, "Adj": 0.4}
+    "Noun": {"Noun": 0.4, "Verb": 0.4, "Adjective": 0.2},
+    "Verb": {"Noun": 0.5, "Verb": 0.3, "Adjective": 0.2},
+    "Adjective": {"Noun": 0.3, "Verb": 0.3, "Adjective": 0.4}
 }
+
+
 emit_prob = {
-    "N": {"Котката": 0.8, "скача": 0.2, "високо": 0.3},
-    "V": {"Котката": 0.1, "скача": 0.7, "високо": 0.1},
-    "Adj": {"Котката": 0.1, "скача": 0.1, "високо": 0.6}
+    "Noun": {"The cat": 0.8, "jumps": 0.2, "high": 0.3},
+    "Verb": {"The cat": 0.1, "jumps": 0.7, "high": 0.1},
+    "Adjective": {"The cat": 0.1, "jumps": 0.1, "high": 0.6}
 }
 
 
@@ -47,5 +52,6 @@ for t in range(T-1, 0, -1):
 
 best_path_states = [states[state] for state in best_path]
 
-print("Най-добър път:", best_path_states)
-print("Максимална вероятност:", best_path_prob)
+
+print("The best path:", best_path_states)
+print("Maximum probability:", best_path_prob)
